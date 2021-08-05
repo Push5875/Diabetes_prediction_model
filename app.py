@@ -17,10 +17,10 @@ def predict():
     if request.method == 'POST':
         Pregnancies = int(request.form['Pregnancies'])
         Glucose=int(request.form['Glucose'])
-        Insulin=int(request.form['Insulin'])
+        Insulin=str(request.form['Insulin'])
         if Insulin=='Yes':
             Insulin = 1
-        else:
+        elif Insulin =='NO':
             Insulin = 0
         BMI=float(request.form['BMI'])
         DiabetesPedigreeFunction=float(request.form['DiabetesPedigreeFunction'])
@@ -29,7 +29,7 @@ def predict():
         output = prediction[0]
         print(output)
         if output==0:
-            return render_template('index.html',prediction_text="You are safe")
+            return render_template('index.html',prediction_text="You are Non-Diabetic")
         else:
             return render_template('index.html',prediction_text="You have Diabetes")
     else:
