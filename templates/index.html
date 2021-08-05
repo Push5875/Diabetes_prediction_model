@@ -202,7 +202,7 @@
   <body>
     <div class="testbox">
         <form action="{{ url_for('predict') }}" method="post">
-        <div class="banner" style="background-image: url('/templates/image.png');">
+        <div class="banner" style="background-image: url('/templates/image.png')">
           <h1>Check your Diabetes here</h1>
         </div>
         <div class="colums">
@@ -217,11 +217,8 @@
             <!-- <input id="lname" type="text" name="lname" required/> -->
           </div>
           <div class="item">
-            <label for="state" id="third" name="Insulin" required="required" >Insulin<span>*</span></label> <br>
-            <select name="Insulin">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <label for="state">Insulin (Yes/No)<span>*</span></label>
+            <input id="third" name="Insulin" required="required">
             <!-- <input id="state" type="text"   name="state" required/> -->
           </div>
           <div class="item">
