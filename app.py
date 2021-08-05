@@ -18,6 +18,10 @@ def predict():
         Pregnancies = int(request.form['Pregnancies'])
         Glucose=int(request.form['Glucose'])
         Insulin=int(request.form['Insulin'])
+        if Insulin=='Yes':
+            Insulin = 1
+        else:
+            Insulin = 0
         BMI=float(request.form['BMI'])
         DiabetesPedigreeFunction=float(request.form['DiabetesPedigreeFunction'])
         Age=int(request.form['Age'])
