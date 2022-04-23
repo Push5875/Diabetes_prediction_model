@@ -31,7 +31,7 @@ def predict():
         if output==0:
             return render_template('index.html',prediction_text="You are Non-Diabetic")
         else:
-            return render_template('index.html',prediction_text="You have Diabetes")
+            return render_template('index.html',prediction_text="Sorry You are Diabetic")
     else:
         return render_template('index.html')
 
